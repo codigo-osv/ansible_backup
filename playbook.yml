@@ -1,0 +1,8 @@
+---
+  - hosts: prueba
+    become: yes
+    gather_facts: yes
+
+    tasks:
+      - name: Copiar archivo de backup al servidor
+        copy: src='/home/observatorio/Escritorio/pfa_dgc-1-8-16.tar' dest='~/pfa_dgc-1-8-16.tar'
