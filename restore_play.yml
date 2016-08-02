@@ -1,0 +1,7 @@
+---
+  - hosts: prueba
+    become: yes
+
+    tasks:
+      - name: Restore
+        command: pg_restore -i -h localhost -p 5432 -U ivan -d pfa_dgc_c -n public -c '/home/ivan/pfa_dgc_c-26-7-16.tar'
